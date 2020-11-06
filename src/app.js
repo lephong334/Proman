@@ -6,11 +6,12 @@ var home = require('./controllers/home');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static('public'));
-app.set('views', 'views');
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 
-app.get('/', auth.check, home.get);
+// app.get('/', auth.check, home.get);
+app.get('/', home.get);
 
 app.listen(3000, () => {
     console.log("App is running on port 3000");
