@@ -1,22 +1,12 @@
 <!--Header with Nav -->
-(1) thể lệ cuộc thi
-(2) My Forum - bao gồm my forum + topic  
-(3) Zara’s store
-(4) Ranking - top of the month / year*/ contributions*
-(5) Search box
-(6) Join the discussion – nằm góc phải
-(7) tài khoản
-(8) 1 cái chuông thông báo (notification icon)
-(9) language button
-
 <header class="text-right">
     <form class="text-left search" method="GET">
-        <input name="q" type="text" placeholder="Search..">
+        <input name="search" type="text" placeholder="Search..">
     </form>
     <div class="menu-icon">
         <div class="dropdown">
             <span class="dropdown-toggle" role="button" id="dropdownSettings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <span class="hidden-xs hidden-sm">Settings</span> <i class="fa fa-cogs" aria-hidden="true"></i>
+            <span class="hidden-xs hidden-sm"></span> <i class="fa fa-cogs" aria-hidden="true"></i>
             </span>
             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSettings">
                 <li>
@@ -26,6 +16,16 @@
                         </div>
                         <div class="col-xs-8 text-left">
                             <span>Settings</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Language" data-toggle="modal" data-target="#settingsmodal">
+                        <div class="col-xs-4">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-8 text-left">
+                            <span>Language</span>
                         </div>
                     </a>
                 </li>
@@ -54,7 +54,7 @@
     </div>
     <div class="second-icon dropdown menu-icon">
         <span class="dropdown-toggle" role="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <span class="hidden-xs hidden-sm">Notifications</span> <i class="fa fa-bell-o" aria-hidden="true"></i> <span class="badge">2</span>
+    <span class="hidden-xs hidden-sm"></span> <i class="fa fa-bell-o" aria-hidden="true"></i> <span class="badge">2</span>
         </span>
         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownNotification">
             <li class="new-not">
@@ -71,11 +71,23 @@
         </ul>
     </div>
     <div class="second-icon menu-icon">
-        <span><a href="personal-profile.html" title="Profile"><span class="hidden-xs hidden-sm">Profile</span> <i class="fa fa-user" aria-hidden="true"></i></a>
+        <span><a href="#" title="Ranking"><span class="hidden-xs hidden-sm">Ranking</span> <i class="fa fa-trophy" aria-hidden="true"></i></a>
         </span>
     </div>
     <div class="second-icon menu-icon">
-        <span><a href="wall.html" title="Wall"><span class="hidden-xs hidden-sm">Wall</span> <i class="fa fa-database" aria-hidden="true"></i></a>
+        <span><a href="#" title="Contest"><span class="hidden-xs hidden-sm">Contest</span> <i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+        </span>
+    </div>
+    <div class="second-icon menu-icon">
+        <span><a href="#" title="Profile"><span class="hidden-xs hidden-sm">Profile</span> <i class="fa fa-user" aria-hidden="true"></i></a>
+        </span>
+    </div>
+    <div class="second-icon menu-icon">
+        <span><a href="/" title="Home"><span class="hidden-xs hidden-sm">Zara</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        </span>
+    </div>
+    <div class="second-icon menu-icon">
+        <span><a href="/" title="Home"><span class="hidden-xs hidden-sm"></span> <i class="fa fa-home" aria-hidden="true"></i></a>
         </span>
     </div>
 </header>
