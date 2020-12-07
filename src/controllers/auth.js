@@ -2,6 +2,10 @@ const axios = require('axios');
 const url = 'http://localhost:5000';
 var err = '';
 
+exports.check = (req, res) => {
+    
+};
+
 exports.login = {};
 
 exports.login.get = (req, res) => {

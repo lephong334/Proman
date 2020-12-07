@@ -1,0 +1,27 @@
+<%- include('layouts/header.ejs') %>
+
+<title>Đăng nhập</title>
+</head>
+
+<body id="login-page">
+
+    <div class="form-box">
+        <div class="form-logo">
+            <p class="text-center"><img src="img/logo.png" alt="logo"></p>
+        </div>
+        <form action="/login" method="POST">
+            <input type="text" class="form-control" placeholder="Username">
+            <input type="password" class="form-control" placeholder="Password">
+            <input type="checkbox"> Lưu mật khẩu
+            <input type="submit" class="btn btn-social" value="ĐĂNG NHẬP">
+        </form>
+        <a href="#" class="login-action" title="Forgot password">
+            <p>Quên mật khẩu hả?</p>
+        </a>
+        <a href="signin.html" class="login-action" title="Signi in">
+            <p>Tạo tài khoản thì zô đây nhen?</p>
+        </a>
+    </div>
+    <!--Close form-box-->
+
+    <%- include('layouts/footer.ejs') %>
