@@ -7,3 +7,9 @@ exports.get = (req, res) => {
         posts: database.posts
     });
 };
+
+exports.post = (req, res) => {
+    res.render('homeplus', {
+        posts: database.posts
+    });
+};

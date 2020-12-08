@@ -1,8 +1,9 @@
-html, body { height:100%;
-             font-family: 'Arial', sans-serif;}
+html, body { height: 100%;
+             font-family: 'Arial', sans-serif;
+             font-size: 14px;}
 
-body { margin:5px;
-       background: #ffffff;}
+body { margin: 5px;
+       background-color: #f0fcfc !important;}
 
 a, a:link, a:visited, a:focus { color:#333;
                                 text-decoration: none; }
