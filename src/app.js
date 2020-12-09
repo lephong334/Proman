@@ -6,6 +6,7 @@ var auth = require('./controllers/auth');
 var competition = require('./controllers/competition');
 var profile = require('./controllers/profile');
 var user = require('./controllers/user');
+var notification = require('./controllers/notification');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -23,6 +24,7 @@ app.get('/contest', competition.contest.get);
 app.get('/ranking', competition.ranking.get);
 app.get('/profile', profile.get);
 app.get('/user', user.get);
+app.get('/notification', notification.get);
 
 
 app.listen(3000, () => {
