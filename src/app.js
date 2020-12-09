@@ -4,6 +4,8 @@ const app = express();
 var home = require('./controllers/home');
 var auth = require('./controllers/auth');
 var competition = require('./controllers/competition');
+var profile = require('./controllers/profile');
+var user = require('./controllers/user');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -11,7 +13,7 @@ app.use(express.static('public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', auth.check);
+app.get('/', auth.check, (req, res) => res.redirect('/home'));
 app.get('/home', home.get);
 app.get('/homeplus', home.post);
 app.get('/login', auth.login.get);
@@ -19,7 +21,8 @@ app.post('/login', auth.login.post);
 app.get('/logout', auth.logout.post);
 app.get('/contest', competition.contest.get);
 app.get('/ranking', competition.ranking.get);
-app.get('/profile', (req, res) => res.send("Chưa có làm trang này! Thông cảm và quay lại tìm đường khác hen <3"));
+app.get('/profile', profile.get);
+app.get('/user', user.get);
 
 
 app.listen(3000, () => {

@@ -4,12 +4,12 @@ var err = '';
 var store = require('store')
 
 exports.check = (req, res) => {
-  if (store.get('user').username == "admin"
-      && store.get('user').password == "admin") {
-      res.redirect('/homeplus');
-  } else {
-    res.redirect('/home');
-  }
+  // if (store.get('user').username == "admin"
+  //     && store.get('user').password == "admin") {
+  //     res.redirect('/homeplus');
+  // } else {
+  //   res.redirect('/home');
+  // }
 };
 
 exports.login = {};
@@ -23,10 +23,10 @@ exports.login.get = (req, res) => {
 exports.login.post = (req, res) => {
   if (req.body.username == "admin"
     && req.body.password == "admin") {
-      store.set('user', {
-        username: req.body.username,
-        password: req.body.password
-      });
+      // store.set('user', {
+      //   username: req.body.username,
+      //   password: req.body.password
+      // });
     res.redirect('/homeplus');
   } else {
     res.redirect('/login');

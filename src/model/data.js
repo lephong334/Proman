@@ -52,7 +52,7 @@ const posts = [
         owner: 'Phong',
         time: '05/07/2020',
         image: 'img/wall.jpg',
-        content: 'Xin chào, tôi tên là Phong',
+        content: 'Xin chào, tôi tên là Phong. abacadsf',
         upvotes: 1500,
         comments: [
             {
