@@ -1,3 +1,18 @@
+const userAccounts = [
+    {
+        username: 'lephong',
+        password: 123456,
+    },
+    {
+        username: 'duykhanh',
+        password: 123456,
+    },
+    {
+        username: 'maihoang',
+        password: 123456,
+    },
+]
+
 const popularImages = {
 
 };
@@ -52,7 +67,7 @@ const posts = [
         owner: 'Phong',
         time: '05/07/2020',
         image: 'img/wall.jpg',
-        content: 'Xin chào, tôi tên là Phong. abacadsf',
+        content: 'Up cái ảnh cho người ta biết mình còn sống',
         upvotes: 1500,
         comments: [
             {
@@ -70,28 +85,29 @@ const posts = [
     {
         owner: 'Phong',
         time: '05/07/2020',
-        image: 'img/wall.jpg',
+        image: 'img/photo5.jpg',
         content: 'Xin chào, tôi tên là Phong',
         upvotes: 1500,
         comments: [
             {
                 owner: 'Hoàng',
                 time: '05/07/2020',
-                contents: 'Tui là Hoàng'
+                content: 'Xin chào'
             },
             {
                 owner: 'My',
                 time: '05/07/2020',
-                contents: 'Tui là My'
+                content: 'Yahalo'
             }
         ]
     },
 ];
 
 module.exports = {
+    userAccounts,
     popularImages,
     popularUsers,
     contest,
     ranking,
     posts
-  };
+};

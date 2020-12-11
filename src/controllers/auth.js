@@ -1,57 +1,44 @@
 const axios = require('axios');
 const url = 'http://localhost:5000';
-var err = '';
-var store = require('store')
+var database = require('../model/data');
 
-exports.check = (req, res) => {
-  // if (store.get('user').username == "admin"
-  //     && store.get('user').password == "admin") {
-  //     res.redirect('/homeplus');
-  // } else {
-  //   res.redirect('/home');
-  // }
+var err = '';
+var currentuser = '';
+
+exports.check = (req, res, next) => {
+  if (currentuser !== null && currentuser !== '') {
+    next();
+  } else {
+    res.redirect('/login');
+  }
 };
 
 exports.login = {};
 
 exports.login.get = (req, res) => {
+  err = '';
   res.render('login', {
     error: err
   });
 };
 
 exports.login.post = (req, res) => {
-  if (req.body.username == "admin"
-    && req.body.password == "admin") {
-      // store.set('user', {
-      //   username: req.body.username,
-      //   password: req.body.password
-      // });
-    res.redirect('/homeplus');
-  } else {
-    res.redirect('/login');
-  }
-
-  // var user = {
-  //     "email": req.body.email,
-  //     "password": req.body.password
-  // };
-  // var requestURL = host + apiURL + "/login";
-  // axios.post(requestURL, user)
-  //     .then(function (response) {
-  //         console.log(response);
-  //         authToken = response.data.token;
-  //         res.redirect('/user');
-  //     })
-  //     .catch(function (error) {
-  //         console.log(error);
-  //         err = error.response.status;
-  //         res.redirect('/login');
-  //     });
+  database.userAccounts.forEach(account => {
+    if (req.body.username == account.username && req.body.password == account.password) {
+      currentuser.username = req.body.username;
+      currentuser.password = req.body.password;
+      res.redirect('/');
+    } else {
+        err = "Oops! Something went wrong."
+        res.render('login', {
+          error: err
+        });
+    }
+});
 };
 
 exports.logout = {};
 exports.logout.post = (req, res) => {
-  store.clearAll();
-  res.redirect('/');
+  currentuser = '';
+  res.redirect('/login');
 };

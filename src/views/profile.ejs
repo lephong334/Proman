@@ -1,21 +1,10 @@
 <%- include('layouts/header.ejs') %>
 
-<title>Other Person Profile</title>
+<title>Your Profile</title>
 </head>
 
 <body>
   <%- include('layouts/nav.ejs') %>
-  <!--Left Sidebar with info Profile -->
-  <div class="sidebar-nav">
-    <a href="personal-profile.html" title="Profile">
-      <img src="img/user.jpg" alt="User name" class="img-circle img-user">
-    </a>
-    <h2 class="text-center hidden-xs"><a href="personal-profile.html" title="Profile">My User</a></h2>
-    <p class="text-center user-description hidden-xs">
-      <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.</i>
-    </p>
-  </div>
 
   <!-- Profile Content -->
   <div class="content-posts profile-content">
@@ -24,10 +13,10 @@
     <!-- Tab Panel -->
     <ul class="nav nav-tabs" role="tablist">
       <li class="active"><a href="#posts" role="tab" id="postsTab" data-toggle="tab" aria-controls="posts"
-          aria-expanded="true">Last posts</a></li>
+          aria-expanded="true">Bài viết</a></li>
       <li><a href="#profile" role="tab" id="profileTab" data-toggle="tab" aria-controls="profile"
-          aria-expanded="true">Profile</a></li>
-      <li><a href="#chat" role="tab" id="chatTab" data-toggle="tab" aria-controls="chat" aria-expanded="true">Chat</a>
+          aria-expanded="true">Thông tin</a></li>
+      <li><a href="#chat" role="tab" id="chatTab" data-toggle="tab" aria-controls="chat" aria-expanded="true">Tin nhắn</a>
       </li>
     </ul>
 
@@ -41,29 +30,71 @@
           <div class="card-post">
             <div class="row">
               <div class="col-xs-3 col-sm-2">
-                <a href="personal-profile.html" title="Profile">
+                <a href="/profile" title="Profile">
                   <img src="img/user.jpg" alt="User name" class="img-circle img-user">
                 </a>
               </div>
               <div class="col-xs-9 col-sm-10 info-user">
-                <h3><a href="personal-profile.html" title="Profile">My User</a></h3>
-                <p><i>2h</i></p>
+                <h3><a href="/profile" role="button" title="Profile">Phong</a></h3>
+                <p><i>05/07/2020</i></p>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 data-post">
-                <p>Lorem Ipsum Dolor si amet</p>
+                <p>Up cái ảnh cho người ta biết mình còn sống</p>
+                <img src="img/wall.jpg" width="500">
                 <div class="reaction">
-                  &#x2764; 156 &#x1F603; 54
+                  <a class="btn" role="button"><i class="fa fa-arrow-up" style="color: #7FFF00"></i>
+                    1500</a>
+                  <a class="btn" role="button"><i class="fa fa-comments"></i> 2</a>
+                  <a class="btn" role="button"><i class="fa fa-share"></i></a>
                 </div>
                 <div class="comments">
-                  <div class="more-comments">View more comments</div>
+                  <div class="more-comments">Bình luận</div>
                   <ul>
-                    <li><b>User1</b> Lorem Ipsum Dolor si amet</li>
-                    <li><b>User2</b> Lorem Ipsum Dolor si amet &#x1F602;</li>
+                    <li><a role="button"><b>Hoàng</b></a> Tui là H &lt;3</li>
+                    <li><a role="button"><b>My</b></a> Tui là M (y)</li>
                   </ul>
                   <form>
-                    <input type="text" class="form-control" placeholder="Add a comment">
+                    <input type="text" class="form-control" placeholder="Viết bình luận">
+                    <input type="submit" class="form-control btn" value="Gửi">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-post">
+            <div class="row">
+              <div class="col-xs-3 col-sm-2">
+                <a href="/profile" title="Profile">
+                  <img src="img/user.jpg" alt="User name" class="img-circle img-user">
+                </a>
+              </div>
+              <div class="col-xs-9 col-sm-10 info-user">
+                <h3><a href="/profile" role="button" title="Profile">Phong</a></h3>
+                <p><i>05/07/2020</i></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2 data-post">
+                <p>Xin chào, tôi tên là Phong</p>
+                <img src="img/photo5.jpg" width="500">
+                <div class="reaction">
+                  <a class="btn" role="button"><i class="fa fa-arrow-up" style="color: #7FFF00"></i>
+                    1500</a>
+                  <a class="btn" role="button"><i class="fa fa-comments"></i> 2</a>
+                  <a class="btn" role="button"><i class="fa fa-share"></i></a>
+                </div>
+                <div class="comments">
+                  <div class="more-comments">Bình luận</div>
+                  <ul>
+                    <li><a role="button"><b>Hoàng</b></a> Xin chào</li>
+                    <li><a role="button"><b>My</b></a> Yahalo</li>
+                  </ul>
+                  <form>
+                    <input type="text" class="form-control" placeholder="Viết bình luận">
+                    <input type="submit" class="form-control btn" value="Gửi">
                   </form>
                 </div>
               </div>
@@ -73,72 +104,45 @@
           <div class="card-post">
             <div class="row">
               <div class="col-xs-3 col-sm-2">
-                <a href="personal-profile.html" title="Profile">
-                  <img src="img/user.jpg" alt="My User" class="img-circle img-user">
-                </a>
-              </div>
-              <div class="col-xs-9 col-sm-10 info-user">
-                <h3><a href="personal-profile.html" title="Profile">My User</a></h3>
-                <p><i>2h</i></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class=" col-sm-8 col-sm-offset-2 data-post">
-                <p>Lorem Ipsum Dolor si amet</p>
-                <img src="img/post.jpg" alt="image post" class="img-post">
-                <div class="reaction">
-                  &#x2764; 1234 &#x1F603; 54
-                </div>
-                <div class="comments">
-                  <div class="more-comments">View more comments</div>
-                  <ul>
-                    <li><b>User1</b> Lorem Ipsum Dolor si amet</li>
-                    <li><b>User2</b> Lorem Ipsum Dolor si amet &#x1F602;</li>
-                  </ul>
-                  <form>
-                    <input type="text" class="form-control" placeholder="Add a comment">
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-post">
-            <div class="row">
-              <div class="col-xs-3 col-sm-2">
-                <a href="personal-profile.html" title="Profile">
+                <a href="/profile" title="User Profile">
                   <img src="img/user.jpg" alt="User name" class="img-circle img-user">
                 </a>
               </div>
               <div class="col-xs-9 col-sm-10 info-user">
-                <h3><a href="personal-profile.html" title="Profile">My User</a></h3>
-                <p><i>2h</i></p>
+                <h3><a href="/profile" role="button" title="User Profile">Phong</a></h3>
+                <p><i>01/06/2020</i></p>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-8 col-sm-offset-2 data-post">
-                <p>Lorem Ipsum Dolor si amet</p>
+                <p>Úi giời ơi</p>
                 <video controls>
                   <source src="img/post-video.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
                 <div class="reaction">
-                  &#x2764; 1234 &#x1F603; 54
+                  <a class="btn" role="button"><i class="fa fa-arrow-up" style="color: #7FFF00"></i>
+                    10</a>
+                  <a class="btn" role="button"><i class="fa fa-comments"></i> 3</a>
+                  <a class="btn" role="button"><i class="fa fa-share"></i></a>
                 </div>
                 <div class="comments">
-                  <div class="more-comments">View more comments</div>
-                  <ul>
-                    <li><b>User1</b> Lorem Ipsum Dolor si amet</li>
-                    <li><b>User2</b> Lorem Ipsum Dolor si amet &#x1F602;</li>
+                  <div class="more-comments">Bình luận</div>
+                  <ul>                  
+                    <li><b>Tâm</b> Nice &#x1F602;</li>
+                    <li><b>Phong</b> Dễ vãi l.</li>
+                    <li><b>Hoàng</b> Meow</li>
                   </ul>
                   <form>
-                    <input type="text" class="form-control" placeholder="Add a comment">
+                    <input type="text" class="form-control" placeholder="Viết bình luận">
+                    <input type="submit" class="form-control btn" value="Gửi">
                   </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div id="loading">
           <img src="img/load.gif" alt="loader">
         </div>
@@ -149,15 +153,11 @@
         <div class="container-fluid container-posts">
           <div class="card-post">
             <ul class="profile-data">
-              <li><b>Username:</b> User</li>
-              <li><b>Age:</b> 26</li>
-              <li><b>Hobbies:</b> trecking and cooking</li>
-              <li><b>Studies:</b> University of World</li>
-              <li><b>Job:</b> Full stack Developer</li>
-              <li><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.</li>
+              <li><b>Người dùng:</b> lephong</li>
+              <li><b>Tuổi:</b> 23</li>
+              <li><b>Nghề nghiệp:</b> Lập trình viên</li>
             </ul>
-            <p><a href="#" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit profile</a></p>
+            <p><a href="#" title="edit profile"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa thông tin</a></p>
           </div>
         </div>
       </div><!-- end tab Profile -->
