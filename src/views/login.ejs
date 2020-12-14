@@ -7,21 +7,22 @@
 
     <div class="form-box">
         <div class="form-logo">
-            <p class="text-center"><img src="img/logo.png" alt="logo"></p>
+            <p class="text-center"><img src="img/proman-logo.png" alt="logo" ></p>
         </div>
         <form action="/login" method="POST">
             <input type="text" class="form-control" placeholder="Tài khoản" name="username">
             <input type="password" class="form-control" placeholder="Mật khẩu" name="password">
             <input type="checkbox"> Lưu mật khẩu
             <input type="submit" class="btn btn-social" value="ĐĂNG NHẬP">
+            <a href="#" class="login-action" title="Forgot password">
+                <p>Quên mật khẩu?</p>
+            </a>
+            <!-- <a href="#" class="login-action" title="Sign in">
+                <p>Tạo tài khoản thì zô đây nhen?</p>
+            </a> -->
             <div class="text-danger"><%= error %></div>
         </form>
-        <a href="#" class="login-action" title="Forgot password">
-            <p>Quên mật khẩu hả?</p>
-        </a>
-        <a href="signin.html" class="login-action" title="Signi in">
-            <p>Tạo tài khoản thì zô đây nhen?</p>
-        </a>
+
     </div>
     <!--Close form-box-->
 

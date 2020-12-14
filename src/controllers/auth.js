@@ -5,32 +5,32 @@ var database = require('../model/data');
 var err = '';
 var currentuser = '';
 
-exports.check = (req, res, next) => {
-  if (currentuser !== null && currentuser !== '') {
+exports.check = (req, resp, next) => {
+  if (currentuser !== null || currentuser !== '') {
     next();
   } else {
-    res.redirect('/login');
+    resp.redirect('/login');
   }
 };
 
 exports.login = {};
 
-exports.login.get = (req, res) => {
+exports.login.get = (req, resp) => {
   err = '';
-  res.render('login', {
+  resp.render('login', {
     error: err
   });
 };
 
-exports.login.post = (req, res) => {
+exports.login.post = (req, resp) => {
   database.userAccounts.forEach(account => {
     if (req.body.username == account.username && req.body.password == account.password) {
       currentuser.username = req.body.username;
       currentuser.password = req.body.password;
-      res.redirect('/');
+      resp.redirect('/');
     } else {
-        err = "Oops! Something went wrong."
-        res.render('login', {
+        err = "Oops! Something went wrong.";
+        resp.render('login', {
           error: err
         });
     }

@@ -17,6 +17,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', auth.check, home.get);
+app.get('/home', home.get);
 // app.get('/home', home.get);
 // app.get('/homeplus', home.post);
 
