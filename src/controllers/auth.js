@@ -3,13 +3,13 @@ const url = 'http://localhost:5000';
 var database = require('../model/data');
 
 var err = '';
-var currentuser = '';
+let currentuser = '';
 
 exports.check = (req, resp, next) => {
-  if (currentuser !== null || currentuser !== '') {
-    next();
-  } else {
+  if (currentuser == '') {
     resp.redirect('/login');
+  } else {
+    next();
   }
 };
 
@@ -25,9 +25,8 @@ exports.login.get = (req, resp) => {
 exports.login.post = (req, resp) => {
   database.userAccounts.forEach(account => {
     if (req.body.username == account.username && req.body.password == account.password) {
-      currentuser.username = req.body.username;
-      currentuser.password = req.body.password;
-      resp.redirect('/');
+      currentuser = req.body.username;
+      resp.redirect('/home');
     } else {
         err = "Oops! Something went wrong.";
         resp.render('login', {

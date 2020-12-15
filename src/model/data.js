@@ -66,19 +66,19 @@ const posts = [
     {
         owner: 'Phong',
         time: '05/12/2020',
-        image: 'img/wall.jpg',
+        image: 'img/zara-003.jpg',
         content: 'Up cái ảnh cho người ta biết mình còn sống',
         upvotes: 1500,
         comments: [
             {
                 owner: 'Hoàng',
                 time: '05/12/2020',
-                content: 'Tui là H <3'
+                content: 'Nice <3'
             },
             {
                 owner: 'My',
                 time: '05/12/2020',
-                content: 'Tui là M (y)'
+                content: 'LULW'
             }
         ]
     },
